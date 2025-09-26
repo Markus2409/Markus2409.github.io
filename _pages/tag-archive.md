@@ -1,6 +1,6 @@
 ---
 title: "Thesis"
-permalink: /tag/
+permalink: /tags/
 layout: thesis
 author_profile: true
 ---
