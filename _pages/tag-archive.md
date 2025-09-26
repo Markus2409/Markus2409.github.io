@@ -1,6 +1,6 @@
 ---
 title: "Thesis"
 permalink: /tags/
-layout: thesis
+layout: tag
 author_profile: true
 ---
