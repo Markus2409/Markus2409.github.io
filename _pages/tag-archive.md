@@ -17,7 +17,7 @@ Questa tesi organizza e condivide dati di **neuroelettrofisiologia** registrati 
 [📄 Scarica la tesi]({{ "/assets/thesis/tesi-marco-cuscuna.pdf" | relative_url }})
 
 <!-- (Opzionale) incorpora il PDF nella pagina -->
-<object data="{{ "/assets/thesis/tesi-marco-cuscuna.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
-  <p>Non vedi l’anteprima? <a href="{{ "/assets/thesis/tesi-marco-cuscuna.pdf" | relative_url }}">Scarica il PDF</a>.</p>
+<object data="{{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
+  <p>Non vedi l’anteprima? <a href="{{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }}">Scarica il PDF</a>.</p>
 </object>
 
