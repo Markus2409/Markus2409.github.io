@@ -1,23 +1,26 @@
 ---
 title: "Thesis"
 permalink: /thesis/
-layout: tag
+layout: single
 author_profile: true
 ---
 
+This page collects my theses written during my studies.
+
+# Bachelor’s Thesis in Biotechnology
+
 ## Abstract
-Questa tesi organizza e condivide dati di **neuroelettrofisiologia** registrati nelle aree **V6A, PE e PEc** di *Macaca fascicularis*, convertendoli in **HDF5** per analisi riproducibili (MATLAB/Python). Vengono verificati qualità dati (es. violazioni ISI), movimento oculare e raster/PSTH durante compiti di reaching in oscurità, con l’obiettivo di favorire il **data sharing** e applicazioni BCI/medicina traslazionale. 
+This thesis organizes and shares **neurophysiology** data recorded in areas **V6A, PE, and PEc** of *Macaca fascicularis*, converting them into **HDF5** for reproducible analyses (MATLAB/Python). Data quality (e.g., ISI violations), eye movements, and raster/PSTH during reaching tasks in darkness are assessed, with the aim of promoting **data sharing** and applications in BCI and translational medicine.
 
-### Dettagli
-- **Autore:** Marco Cuscunà  
-- **Corso:** Biotecnologie – Univ. di Bologna • **A.A. 2023/2024**  
-- **Relatore:** Patrizia Fattori • **Correlatore:** F. E. Vaccari
+### Details
+- **Author:** Marco Cuscunà  
+- **Program:** Biotechnology – University of Bologna • **A.Y. 2023/2024**  
+- **Advisor:** Patrizia Fattori • **Co-advisor:** F. E. Vaccari
 
-### Scarica la tesi (PDF)
-[📄 Scarica la tesi]({{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }})
+### Download the thesis (PDF)
+[📄 Download the thesis]({{ "/assets/TESI_Marco%20Cuscun%C3%A0.pdf" | relative_url }})
 
-<!-- (Opzionale) incorpora il PDF nella pagina -->
-<object data="{{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
-  <p>Non vedi l’anteprima? <a href="{{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }}">Scarica il PDF</a>.</p>
+<!-- (Optional) embed the PDF on the page -->
+<object data="{{ "/assets/TESI_Marco%20Cuscun%C3%A0.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
+  <p>Can’t see the preview? <a href="{{ "/assets/TESI_Marco%20Cuscun%C3%A0.pdf" | relative_url }}">Download the PDF</a>.</p>
 </object>
-
