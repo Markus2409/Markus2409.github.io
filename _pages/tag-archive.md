@@ -14,7 +14,7 @@ Questa tesi organizza e condivide dati di **neuroelettrofisiologia** registrati 
 - **Relatore:** Patrizia Fattori • **Correlatore:** F. E. Vaccari
 
 ### Scarica la tesi (PDF)
-[📄 Scarica la tesi]({{ "/assets/thesis/tesi-marco-cuscuna.pdf" | relative_url }})
+[📄 Scarica la tesi]({{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }})
 
 <!-- (Opzionale) incorpora il PDF nella pagina -->
 <object data="{{ "/assets/TESI_Marco%20Cuscunà.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
