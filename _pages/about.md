@@ -3,6 +3,4 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+My name is Marco😎. Ever since I got my hands on my father’s first computer, I’ve been passionate about technology and programming. Over time, I decided to combine this love for computer science 👾 with my fascination for biology 🦠. I graduated in Biotechnology (2024) with a thesis in bioinformatics focused on the analysis of neuroelectrophysiology data 🧠, and I am now pursuing a Master’s degree in Bioinformatics at the Department of Pharmacy and Biotechnology (FaBiT), Alma Mater Studiorum University of Bologna, Italy. My main interest is applying computational and programming skills to biotechnology and omics sciences.
