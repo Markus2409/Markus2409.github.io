@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## Abstract
-Questa tesi organizza e condivide dati di **neuroelettrofisiologia** registrati nelle aree **V6A, PE e PEc** di *Macaca fascicularis*, convertendoli in **HDF5** per analisi riproducibili (MATLAB/Python). Vengono verificati qualità dati (es. violazioni ISI), movimento oculare e raster/PSTH durante compiti di reaching in oscurità, con l’obiettivo di favorire il **data sharing** e applicazioni BCI/medicina traslazionale. :contentReference[oaicite:0]{index=0}
+Questa tesi organizza e condivide dati di **neuroelettrofisiologia** registrati nelle aree **V6A, PE e PEc** di *Macaca fascicularis*, convertendoli in **HDF5** per analisi riproducibili (MATLAB/Python). Vengono verificati qualità dati (es. violazioni ISI), movimento oculare e raster/PSTH durante compiti di reaching in oscurità, con l’obiettivo di favorire il **data sharing** e applicazioni BCI/medicina traslazionale. 
 
 ### Dettagli
 - **Autore:** Marco Cuscunà  
