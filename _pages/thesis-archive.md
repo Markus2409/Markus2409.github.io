@@ -36,8 +36,8 @@ Alzheimer's disease is the most common cause of dementia worldwide and, when dia
 - **Advisor:** Emidio Capriotti • **Co-advisors:** Sara C. Madeira, Diogo F. M. Soares
 
 #### Download the thesis (PDF)
-[📄 Download the thesis]({{ "/assets/TESI_Magistrale_Marco%20Cuscun%C3%A0.pdf" | relative_url }})
+[📄 Download the thesis]({{ "/assets/Master_Thesis_Marco_Cuscuna.pdf" | relative_url }})
 
 <object data="{{ "/assets/Master_Thesis_Marco_Cuscuna.pdf" | relative_url }}" type="application/pdf" width="100%" height="820">
-  <p>Can't see the preview? <a href="{{ "/assets/TESI_Magistrale_Marco%20Cuscun%C3%A0.pdf" | relative_url }}">Download the PDF</a>.</p>
+  <p>Can't see the preview? <a href="{{ "/assets/Master_Thesis_Marco_Cuscuna.pdf" | relative_url }}">Download the PDF</a>.</p>
 </object>
