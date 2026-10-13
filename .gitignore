@@ -1,4 +1,7 @@
-_site
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
+# Source files kept locally only (the CV includes phone number and date of birth).
+# The site uses the copies under assets/.
+/CV-MarcoCuscuna.pdf
+/Linkedin profile picture.png
+/Master_Thesis_Marco_Cuscuna.pdf
+/TESI_Marco Cuscunà.pdf
+/.claude/

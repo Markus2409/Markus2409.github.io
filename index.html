@@ -1,23 +1,429 @@
----
-layout: home
-title: "Home"
-nav_order: 1
-permalink: /
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marco Cuscunà | Data Scientist & Bioinformatician</title>
+  <meta name="description" content="Marco Cuscunà, bioinformatics graduate working at the intersection of machine learning, biomedical data and neuroscience.">
+  <meta property="og:title" content="Marco Cuscunà | Data Scientist">
+  <meta property="og:description" content="Bioinformatics · Machine learning · Computational neuroscience">
+  <meta property="og:image" content="assets/img/marco-cutout.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='15' fill='%23fff' text-anchor='middle'%3EMC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
----
-<div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-<img src="{{ '/assets/images/IMG_5476.JPEG' | relative_url }}"
-     alt="Marco Cuscunà"
-     width="300"
-     loading="lazy" />
-  <div>
-    <p>Welcome to my little corner of the internet 👋<br>
-    I’m <strong>Marco Cuscunà</strong>, a computing and biotechnology enthusiast.
-    Here I share projects, notes, and my academic work.</p>
-    <p>
-      <a class="btn btn--primary" href="/thesis/">📄 Thesis</a>
-      <a class="btn btn--primary" href="/posts/">✍️ Posts</a>
-      <a class="btn btn--primary" href="/about/">👤 About</a>
-    </p>
-  </div>
-</div>
+  <!-- Icon sprite (Lucide, MIT) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  </svg>
+
+  <header class="topbar" id="top">
+    <div class="topbar__inner">
+      <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Open to new opportunities</span>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span>Menu</span>
+        </button>
+        <ul class="nav__list" id="nav-list">
+          <li><a href="#experience">Experience <span class="count">[3]</span></a></li>
+          <li><a href="#thesis">Thesis <span class="count">[2]</span></a></li>
+          <li><a href="#projects">Projects <span class="count">[5]</span></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--dark btn--sm" href="mailto:marco.cuscuna01@gmail.com">Let's Talk <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-name">
+      <h1 class="hero__name" id="hero-name">
+        <span class="hero__first">Marco</span>
+        <span class="hero__last">Cuscunà</span>
+      </h1>
+
+      <img class="hero__photo" src="assets/img/marco-cutout.png" width="800" height="672"
+           alt="Portrait of Marco Cuscunà in a navy blazer and white shirt" fetchpriority="high">
+
+      <div class="hero__intro">
+        <p class="hero__role">Data Scientist</p>
+        <p class="hero__tagline">Bioinformatician turning biomedical and neural data into predictive models, from CSF proteomics to primate electrophysiology.</p>
+        <a class="btn btn--dark" href="#projects">See my work <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <ul class="hero__socials" aria-label="Social profiles">
+        <li><a class="chip" href="https://github.com/Markus2409" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+        <li><a class="chip" href="https://www.linkedin.com/in/marcocuscuna" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+        <li><a class="chip" href="https://www.instagram.com/marcocuscu/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li>
+        <li><a class="chip" href="mailto:marco.cuscuna01@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a></li>
+      </ul>
+    </section>
+
+    <!-- ============ STATS STRIP ============ -->
+    <section class="strip" aria-label="Highlights">
+      <dl class="strip__grid">
+        <div><dt>MSc Bioinformatics</dt><dd>110<span>/110</span></dd><p>cum laude, highest honors</p></div>
+        <div><dt>BSc Biotechnology</dt><dd>110<span>/110</span></dd><p>cum laude</p></div>
+        <div><dt>Research labs</dt><dd>2</dd><p>Lisbon &amp; Bologna</p></div>
+        <div><dt>Languages</dt><dd>3</dd><p>IT · EN (C1) · PT (A1)</p></div>
+      </dl>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <header class="section__head">
+        <span class="section__index">01</span>
+        <h2 id="exp-title">Experience</h2>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__meta"><span class="mono">02.2026 - 08.2026</span><span><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Lisbon, Portugal</span></div>
+          <div class="timeline__body">
+            <h3>Bioinformatics Research Intern</h3>
+            <p class="timeline__org">LASIGE, University of Lisbon</p>
+            <ul>
+              <li>Investigated proteomic biomarkers to predict time-to-conversion from Mild Cognitive Impairment to Alzheimer's disease dementia.</li>
+              <li>Extended an ensemble feature-selection framework; trained Random Forest and SVM models on high-dimensional CSF proteomics across two independent cohorts with nested cross-validation.</li>
+              <li>Identified ten candidate biomarkers through convergent feature selection, Gini importance and survival analysis.</li>
+            </ul>
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>scikit-learn</li><li>Survival analysis</li><li>Proteomics</li></ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__meta"><span class="mono">01.2022 - 01.2023</span><span><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Bologna, Italy</span></div>
+          <div class="timeline__body">
+            <h3>Bioinformatics &amp; Neurophysiology Intern</h3>
+            <p class="timeline__org">DIBINEM, University of Bologna</p>
+            <ul>
+              <li>Processed electrophysiological recordings and eye-movement data from non-human primates during reach-and-grasp tasks.</li>
+              <li>Structured neural recordings into HDF5 for efficient retrieval from MATLAB and Python.</li>
+              <li>Assessed data quality through gaze analysis and refractory-period violation metrics.</li>
+            </ul>
+            <ul class="tags" aria-label="Tools"><li>MATLAB</li><li>HDF5</li><li>Python</li><li>Electrophysiology</li></ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__meta"><span class="mono">03.2019 - 04.2019</span><span><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Cento (FE), Italy</span></div>
+          <div class="timeline__body">
+            <h3>IT Support Intern</h3>
+            <p class="timeline__org">Centro Computer S.p.A.</p>
+            <ul>
+              <li>Configured and deployed PCs, smartphones and printers for business clients with standard and custom setups.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="edu">
+        <h3 class="edu__title">Education</h3>
+        <div class="edu__grid">
+          <article class="edu__card">
+            <span class="mono">2024 - 2026</span>
+            <h4>MSc in Bioinformatics</h4>
+            <p>University of Bologna · 110/110 cum laude with highest honors · Erasmus+ thesis scholarship at the University of Lisbon</p>
+          </article>
+          <article class="edu__card">
+            <span class="mono">2021 - 2024</span>
+            <h4>BSc in Biotechnology</h4>
+            <p>University of Bologna · 110/110 cum laude</p>
+          </article>
+          <article class="edu__card">
+            <span class="mono">2015 - 2020</span>
+            <h4>High School Diploma, Applied Science</h4>
+            <p>Liceo Scientifico M. Morandi, Finale Emilia · 97/100</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THESIS ============ -->
+    <section class="section section--alt" id="thesis" aria-labelledby="thesis-title">
+      <header class="section__head">
+        <span class="section__index">02</span>
+        <h2 id="thesis-title">Thesis</h2>
+        <p class="section__lede">Both full documents, readable right here: scroll inside the viewer, or open them full-screen.</p>
+      </header>
+
+      <div class="thesis-grid">
+        <article class="thesis">
+          <div class="thesis__info">
+            <span class="badge">MSc · 2026</span>
+            <h3>Learning predictive models of time-to-conversion from MCI A+ to AD using CSF proteomics and clinical data</h3>
+            <p>Extended an ensemble feature-selection framework (FSE-StabPred) on two independent cohorts (Lisbon-Coimbra LC-SWATH-MS and ADNI-A+ SOMAscan 7K), comparing proteomic features against conventional CSF biomarkers with Random Forest and SVM in nested cross-validation.</p>
+            <p class="thesis__people">Supervisor: Emidio Capriotti · Co-supervisors: Sara C. Madeira, Diogo F. M. Soares</p>
+            <div class="thesis__actions">
+              <a class="btn btn--ghost btn--sm" href="assets/pdf/msc-thesis-cuscuna.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg>Open full-screen</a>
+              <a class="btn btn--ghost btn--sm" href="assets/pdf/msc-thesis-cuscuna.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</a>
+            </div>
+          </div>
+          <div class="pdf-viewer" data-pdf="assets/pdf/msc-thesis-cuscuna.pdf" tabindex="0" role="region" aria-label="Master's thesis document viewer">
+            <div class="pdf-viewer__bar"><span class="mono pdf-viewer__count">Loading…</span></div>
+            <div class="pdf-viewer__pages"></div>
+          </div>
+        </article>
+
+        <article class="thesis">
+          <div class="thesis__info">
+            <span class="badge">BSc · 2024</span>
+            <h3 lang="it">Estrazione, gestione e organizzazione di dati di neuroelettrofisiologia delle aree V6A, PE e PEc in architettura gerarchica</h3>
+            <p>Extraction, management and hierarchical organisation (HDF5) of neuro-electrophysiological data from macaque posterior parietal areas V6A, PE and PEc. Written in Italian.</p>
+            <p class="thesis__people">Supervisor: Patrizia Fattori · Co-supervisor: Francesco E. Vaccari</p>
+            <div class="thesis__actions">
+              <a class="btn btn--ghost btn--sm" href="assets/pdf/bsc-thesis-cuscuna.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg>Open full-screen</a>
+              <a class="btn btn--ghost btn--sm" href="assets/pdf/bsc-thesis-cuscuna.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</a>
+            </div>
+          </div>
+          <div class="pdf-viewer" data-pdf="assets/pdf/bsc-thesis-cuscuna.pdf" tabindex="0" role="region" aria-label="Bachelor's thesis document viewer">
+            <div class="pdf-viewer__bar"><span class="mono pdf-viewer__count">Loading…</span></div>
+            <div class="pdf-viewer__pages"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <header class="section__head">
+        <span class="section__index">03</span>
+        <h2 id="projects-title">Projects</h2>
+        <p class="section__lede">Coursework and personal projects from the MSc in Bioinformatics (code on GitHub).</p>
+      </header>
+
+      <ul class="projects">
+        <li>
+          <a class="project" href="https://github.com/Markus2409/AML_project" target="_blank" rel="noopener">
+            <span class="project__num mono">P.01</span>
+            <h3>Multi-class classification of liver cirrhosis stages</h3>
+            <p>Random Forest, SVM and Logistic Regression to stage Primary Biliary Cholangitis, handling class imbalance and missing data through preprocessing and imputation.</p>
+            <ul class="tags"><li>Python</li><li>ML</li><li>Jupyter</li></ul>
+            <span class="project__link">AML_project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="project" href="https://github.com/Markus2409/DNA-RNA_Project" target="_blank" rel="noopener">
+            <span class="project__num mono">P.02</span>
+            <h3>Illumina 450K DNA methylation analysis</h3>
+            <p>R pipeline for preprocessing, QC, normalization, PCA and differential methylation between control and disease samples.</p>
+            <ul class="tags"><li>R</li><li>Epigenomics</li><li>Statistics</li></ul>
+            <span class="project__link">DNA-RNA_Project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="project" href="https://github.com/Markus2409/MSc_Bioinformatics_HMM_KunitzDomain" target="_blank" rel="noopener">
+            <span class="project__num mono">P.03</span>
+            <h3>Profile HMM for Kunitz-type domain detection</h3>
+            <p>Built and evaluated profile Hidden Markov Models for PF00014, comparing a structure-based model with a MUSCLE sequence-based one.</p>
+            <ul class="tags"><li>HMMER</li><li>Shell</li><li>Structural bioinfo</li></ul>
+            <span class="project__link">HMM_KunitzDomain <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="project" href="https://github.com/Markus2409/LB2_project_Group_3" target="_blank" rel="noopener">
+            <span class="project__num mono">P.04</span>
+            <h3>Secretory signal peptide prediction</h3>
+            <p>Comparative study of von Heijne's method, Support Vector Machines and Neural Networks for predicting secretory signal peptides.</p>
+            <ul class="tags"><li>Python</li><li>SVM</li><li>Neural nets</li></ul>
+            <span class="project__link">LB2_project_Group_3 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="project" href="https://github.com/Markus2409/Applied_Genomics_Project" target="_blank" rel="noopener">
+            <span class="project__num mono">P.05</span>
+            <h3>De novo genome assembly of <i>Pelobatrachus nasutus</i></h3>
+            <p>Simulated €100k workflow for assembly, functional annotation and population genomics of the Malayan horned frog, focused on antimicrobial defense and skin-biology genes.</p>
+            <ul class="tags"><li>Genomics</li><li>Pipeline design</li></ul>
+            <span class="project__link">Applied_Genomics_Project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="project project--more" href="https://github.com/Markus2409" target="_blank" rel="noopener">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-github"/></svg>
+            <h3>All repositories</h3>
+            <span class="project__link">github.com/Markus2409 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="skills">
+        <h3 class="edu__title">Toolkit</h3>
+        <dl class="skills__grid">
+          <div><dt>Programming &amp; data</dt><dd>Python · R · SQL · MATLAB · Machine Learning</dd></div>
+          <div><dt>Tools</dt><dd>Git · Linux/Ubuntu · Jupyter · AWS</dd></div>
+          <div><dt>Bioinformatics</dt><dd>Biomedical data management · Biomarker identification · Predictive modelling · Genome assembly</dd></div>
+          <div><dt>Life sciences</dt><dd>Molecular biology · Genetics · Biochemistry · Cell biology · Human physiology · Genomics &amp; proteomics</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--alt" id="about" aria-labelledby="about-title">
+      <header class="section__head">
+        <span class="section__index">04</span>
+        <h2 id="about-title">About me</h2>
+      </header>
+
+      <div class="about">
+        <div class="about__intro">
+          <p class="about__lead">Where the lab stops, computational biology starts.</p>
+          <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Looking for data analyst roles</span>
+        </div>
+
+        <ol class="story">
+          <li class="story__item">
+            <span class="story__num mono">01</span>
+            <div>
+              <h3>The spark</h3>
+              <p>My first contact with technology came early, as a kid playing on game consoles. In high school I wrote my first lines of code in Java, and in my second year my father gave me a Raspberry Pi, which quickly became my playground for all kinds of experiments.</p>
+            </div>
+          </li>
+          <li class="story__item">
+            <span class="story__num mono">02</span>
+            <div>
+              <h3>A turning point</h3>
+              <p>My final year of high school coincided with COVID-19, and it changed my perspective. I had always been curious about how life works, and the pandemic showed me how much biology can give back to the world. So I enrolled in Biotechnology at the University of Bologna.</p>
+            </div>
+          </li>
+          <li class="story__item">
+            <span class="story__num mono">03</span>
+            <div>
+              <h3>Where the lab stops</h3>
+              <p>One course changed everything: Structural and Computational Biology. It showed me that research does not rely on the wet lab alone, because where the lab stops, computational biology starts. Seeing the computer (until then just a hobby) become a tool for real science fascinated me.</p>
+              <p>That is why I joined the DIBINEM department for an internship. The group studies how motor movements are decoded in both human patients and macaques, and I worked with spike recordings from the macaque brain: reorganising them into a hierarchical structure that makes analysis easier, then analysing them. Along the way I wrote MATLAB for the first time.</p>
+            </div>
+          </li>
+          <li class="story__item">
+            <span class="story__num mono">04</span>
+            <div>
+              <h3>Building the toolkit</h3>
+              <p>After my bachelor's degree I continued with the MSc in Bioinformatics at UNIBO, where I strengthened my coding in Python, SQL and R across many projects: searching protein sequences for domains, identifying DNA methylation, and developing machine learning models that classify disease stages from biological samples.</p>
+              <p>The programme was international, and my classmates taught me as much as the courses did, both about their cultures and through the exchange of ideas shaped by backgrounds different from mine.</p>
+            </div>
+          </li>
+          <li class="story__item">
+            <span class="story__num mono">05</span>
+            <div>
+              <h3>Six months in Portugal</h3>
+              <p>That curiosity led me to Erasmus. I wanted to push past my limits and the fear of leaving home, and to meet even more people. I chose Portugal for its wild, unspoiled landscapes.</p>
+              <p>At LASIGE (University of Lisbon) I worked on a project once again tied to neurology: discovering biomarkers linked to how fast Alzheimer's disease progresses. My research team welcomed me warmly and supported me at every step. In my free time I met people from all over the world and travelled a lot, discovering new landscapes, cultures, food and ways of living and thinking. It was one of the best experiences of my life.</p>
+            </div>
+          </li>
+          <li class="story__item">
+            <span class="story__num mono">06</span>
+            <div>
+              <h3>What's next</h3>
+              <p>Back from Lisbon, I completed my master's degree. I'm now looking for a role as a data analyst, where I can bring together data, code and biology.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <figure class="feature">
+        <img src="assets/img/instagram/Dc5lW7SCI4b.jpg" width="1080" height="810" loading="lazy" decoding="async"
+             alt="Portuguese flag covered in handwritten signatures and messages from friends">
+        <figcaption>
+          <span class="mono">Lisbon, Portugal</span>
+          <p>A flag full of signatures and messages from the people who made my Erasmus unforgettable.</p>
+          <a class="chip" href="https://www.instagram.com/p/Dc5lW7SCI4b/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>View post</a>
+        </figcaption>
+      </figure>
+
+      <div class="insta">
+        <div class="insta__head">
+          <h3 class="edu__title">Off the screen</h3>
+          <a class="chip" href="https://www.instagram.com/marcocuscu/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>@marcocuscu</a>
+        </div>
+        <ul class="insta__grid">
+          <!-- Photos saved from public posts in assets/img/instagram/. To add one: save the image there and copy a <li>. -->
+          <li><a class="insta__item" href="https://www.instagram.com/p/DdwPb8hiEUL/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DdwPb8hiEUL.jpg" style="object-position: 30% center" alt="Marco being crowned with a laurel wreath at his graduation, University of Bologna" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Bologna</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DcTaBtnCOrQ/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DcTaBtnCOrQ.jpg" alt="Purple Pride of Madeira flowers on a mountain ridge at sunrise above the clouds" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Madeira Island</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DaQofYNCCsJ/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DaQofYNCCsJ.jpg" alt="Sunset over the Douro river in Porto" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Porto, Portugal</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DZnqu-XCKng/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DZnqu-XCKng.jpg" alt="Marco leaning on the balustrade at Plaza de España in Seville" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Seville, Spain</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DZZucqEiOFT/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DZZucqEiOFT.jpg" alt="Blooming purple jacaranda tree next to a monument in Lagos" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Lagos, Algarve</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DY4ZCv1iEp2/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DY4ZCv1iEp2.jpg" alt="Narrow Barcelona street decorated with Catalan flags" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Barcelona, Spain</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DYjgZvSiKkX/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DYjgZvSiKkX.jpg" alt="Gothic towers of Quinta da Regaleira among the trees" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Quinta da Regaleira, Sintra</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DXFKvQziCjb/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DXFKvQziCjb.jpg" alt="Red-and-white brick facade of Sintra station with an azulejo tile panel" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Sintra, Portugal</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DTOAtaQCAtg/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DTOAtaQCAtg.jpg" alt="Marco from behind in an oversized peach t-shirt on a street at dusk in Lanzarote" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Lanzarote, Canaries</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DNbHxVkIMR_/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DNbHxVkIMR_.jpg" alt="Wide sandy beach and turquoise water in Fuerteventura" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>Fuerteventura, Canaries</span>
+          </a></li>
+          <li><a class="insta__item" href="https://www.instagram.com/p/DCCikaSoNQn/" target="_blank" rel="noopener">
+            <img src="assets/img/instagram/DCCikaSoNQn.jpg" alt="Marco in a long dark coat by a lake under a blue sky" width="1080" height="1350" loading="lazy" decoding="async">
+            <span class="insta__loc"><svg class="icon icon--xs" aria-hidden="true"><use href="#i-pin"/></svg>München, Germany</span>
+          </a></li>
+          <li><a class="insta__item insta__item--more" href="https://www.instagram.com/marcocuscu/" target="_blank" rel="noopener">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-instagram"/></svg>
+            <span>More on Instagram</span>
+            <span class="mono">@marcocuscu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="contact__kicker mono">05 / Contact</p>
+      <h2 id="contact-title" class="contact__title"><span class="outline">Let's</span> talk.</h2>
+      <p class="contact__text">Open to research and data-science roles in biomedicine and neuroscience.</p>
+      <a class="contact__mail" href="mailto:marco.cuscuna01@gmail.com">marco.cuscuna01@gmail.com <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <ul class="contact__socials">
+        <li><a class="chip chip--dark" href="https://www.linkedin.com/in/marcocuscuna" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+        <li><a class="chip chip--dark" href="https://github.com/Markus2409" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+        <li><a class="chip chip--dark" href="https://www.instagram.com/marcocuscu/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Marco Cuscunà</span>
+    <span class="mono">Cento, Italy</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
+</body>
+</html>

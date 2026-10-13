@@ -1,27 +1,31 @@
-# Minimal Mistakes remote theme starter
+# Marco Cuscunà, personal site
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Static site (plain HTML/CSS/JS, no build step) for GitHub Pages.
 
-Contains basic configuration to get you a site with:
+```
+index.html
+assets/css/style.css
+assets/js/main.js              nav, scroll reveal, PDF.js thesis viewers, lazy Instagram embeds
+assets/img/marco-cutout.png    portrait with background removed
+assets/pdf/                    the two theses
+```
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## Publish on GitHub Pages
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+1. Create a public repo named exactly `Markus2409.github.io`.
+2. Push the contents of this folder to its `main` branch (the original CV/photo/thesis files in the root are ignored via `.gitignore`).
+3. Repo → Settings → Pages → Source: *Deploy from a branch*, `main` / root.
+4. The site goes live at https://markus2409.github.io
 
----
+## Editing
 
-## Troubleshooting
+- **About me**: `index.html`, section `#about` (marked with a TODO).
+- **Instagram photos**: saved in `assets/img/instagram/` (named by post ID). To add one, save the image there and copy one of the `<li>` tiles in `.insta__grid`, changing the post link, image, alt text and location.
+- After changing CSS/JS, bump the `?v=` number in `index.html` so browsers fetch the new file.
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+## Local preview
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+```
+node .claude/serve.mjs . 5173
+```
+then open http://localhost:5173 (the PDF viewer needs a server; it won't work from `file://`).
