@@ -216,11 +216,11 @@ main { background: var(--c-bg); }
   width: var(--photo-w); height: auto;
   z-index: 1;
   filter: grayscale(1) contrast(1.04);
-  transition: filter 700ms var(--ease-out);
+  transition: filter 1800ms ease-in-out;
   -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
           mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
 }
-.hero__photo:hover { filter: grayscale(0) contrast(1); }
+.hero__photo.is-color { filter: grayscale(0) contrast(1); }   /* set by main.js while the hero is on screen */
 
 .hero__intro {
   grid-column: 1; grid-row: 2; align-self: end;
@@ -294,6 +294,7 @@ main { background: var(--c-bg); }
 }
 .strip dd span { color: transparent; -webkit-text-stroke: 1.5px #fff; }
 .strip p { font-size: .8125rem; color: #cfcfcf; }
+.strip .strip__gpa { margin-top: 6px; color: #fff; font-size: .75rem; letter-spacing: .04em; }
 @media (max-width: 760px) { .strip__grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; } }
 
 /* ---------- Sections ---------- */

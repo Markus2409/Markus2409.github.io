@@ -53,6 +53,12 @@ const scheduleFit = () => { cancelAnimationFrame(fitFrame); fitFrame = requestAn
 document.fonts.ready.then(fitName);
 window.addEventListener("resize", scheduleFit);
 
+/* ---------- Hero photo: colour while the hero is in view, grey once scrolled away ---------- */
+const heroPhoto = document.querySelector(".hero__photo");
+new IntersectionObserver(([entry]) => {
+  heroPhoto.classList.toggle("is-color", entry.intersectionRatio >= 0.5);
+}, { threshold: [0, 0.5, 1] }).observe(hero);
+
 /* ---------- Scroll reveal ---------- */
 const revealTargets = document.querySelectorAll(".section__head, .timeline__item, .edu__card, .thesis, .projects > li, .skills, .about__intro, .story__item, .feature, .insta, .strip__grid > div");
 const revealObserver = new IntersectionObserver((entries) => {
